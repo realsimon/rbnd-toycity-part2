@@ -1,7 +1,15 @@
 require 'json'
-path = File.join(File.dirname(__FILE__), '../data/products.json')
-file = File.read(path)
-products_hash = JSON.parse(file)
+#replaced with "setup_files" method:
+#path = File.join(File.dirname(__FILE__), '../data/products.json')
+#file = File.read(path)
+#products_hash = JSON.parse(file)
+
+def setup_files
+    path = File.join(File.dirname(__FILE__), '../data/products.json')
+    file = File.read(path)
+    $products_hash = JSON.parse(file)
+    $report_file = File.new("report.txt", "w+")
+end
 
 # Print "Sales Report" in ascii art
 
