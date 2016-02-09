@@ -1,5 +1,5 @@
 require 'json'
-require 'artii'
+require 'artii'   #Artii gem: https://github.com/miketierney/artii.git
 
 #replaced with "setup_files" method:
 #path = File.join(File.dirname(__FILE__), '../data/products.json')

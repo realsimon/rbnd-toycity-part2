@@ -1,3 +1,25 @@
+commit 8d491ec39544f08af3ea2adc55f6d3b08e108117
+Author: realsimon <realsimon@gmail.com>
+Date:   Tue Feb 9 10:40:13 2016 -0500
+
+    Replaced figlet with artii
+    
+    Artii use h/t to AngelikaDW:
+    https://github.com/AngelikaDW
+    Artii gem: https://github.com/miketierney/artii.git
+
+commit e4695a4fe487ecd694de00e0277c7f18724543a3
+Author: realsimon <realsimon@gmail.com>
+Date:   Tue Feb 9 10:18:19 2016 -0500
+
+    Small syntax improvement for do_total method and brand_toys.each loop
+
+commit 66ba6b46b7b52dfee6f5323479e2093305e46401
+Author: realsimon <realsimon@gmail.com>
+Date:   Mon Feb 8 23:47:32 2016 -0500
+
+    git.log
+
 commit dc2a3432c5efad05a1876b76b007e294fc120104
 Author: realsimon <realsimon@gmail.com>
 Date:   Mon Feb 8 23:44:00 2016 -0500
