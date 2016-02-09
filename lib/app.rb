@@ -28,8 +28,7 @@ end
 
 # Calculate total:
 def do_total(hash, field)
-  total = 0.0
-  total = hash.reduce(total) {|total, element | total + element[field].to_f}
+  total = hash.reduce(0.0) {|total, element | total + element[field].to_f}
   return total.round(2)
 end
 
@@ -96,7 +95,7 @@ def brands_report
     sales_vol = 0.0
 
     brand_toys.each do |toy|
-      sales_vol = sales_vol + do_total(toy["purchases"],"price")
+      sales_vol += do_total(toy["purchases"],"price")
     end
 
     $report_file.puts " #{brand} sales volume: #{sales_vol.round(2)}"
