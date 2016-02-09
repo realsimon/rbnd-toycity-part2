@@ -1,4 +1,5 @@
 require 'json'
+require 'artii'
 
 #replaced with "setup_files" method:
 #path = File.join(File.dirname(__FILE__), '../data/products.json')
@@ -18,11 +19,11 @@ def setup_files
     $report_file = File.new("report.txt", "w+")
 end
 
-# Use command line "figlet" utility to print ascii art banner:
+# Use "artii" gem to print ascii art banner:
 def print_banner(banner_text)
-  banner = `figlet "#{$indent}#{banner_text}"`
+  banner = Artii::Base.new
   $report_file.puts
-  $report_file.puts banner
+  $report_file.puts banner.asciify("#{$indent}#{banner_text}")
   $report_file.puts
 end
 
