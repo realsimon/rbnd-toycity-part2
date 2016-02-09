@@ -15,7 +15,7 @@ def setup_files
     file = File.read(path)
     $products_hash = JSON.parse(file)
     # Comment out next line for screen output:
-    #$report_file = File.new("report.txt", "w+")
+    $report_file = File.new("report.txt", "w+")
 end
 
 # Use command line "figlet" utility to print ascii art banner:
@@ -45,25 +45,25 @@ def products_report
   $products_hash["items"].each do |toy|
 
 	# Print the name of the toy
-  $report_file.puts toy["title"]
+  $report_file.puts " #{toy["title"]}"
 
   # Print the retail price of the toy
-  $report_file.puts "Retail price: #{toy["full-price"]}"
+  $report_file.puts " Retail price: #{toy["full-price"]}"
 
 	# Calculate and print the total number of purchases
   sales_num = toy["purchases"].count
-  $report_file.puts "Number sold: #{sales_num}"
+  $report_file.puts " Number sold: #{sales_num}"
 
 	# Calculate and print the total amount of sales
   sales_sum = do_total(toy["purchases"],"price")
-  $report_file.puts "Total amount of sales: #{sales_sum}"
+  $report_file.puts " Total amount of sales: #{sales_sum}"
 
 	# Calculate and print the average price the toy sold for
   average_sale = sales_sum / sales_num
-  $report_file.puts "Average sale price: #{average_sale}"
+  $report_file.puts " Average sale price: #{average_sale}"
 
 	# Calculate and print the average discount (% or $) based off the average sales price
-  $report_file.puts "Average discount: #{((1 - (average_sale / toy["full-price"].to_f)) * 100).round(2)} %"
+  $report_file.puts " Average discount: #{((1 - (average_sale / toy["full-price"].to_f)) * 100).round(2)} %"
 
   $report_file.puts
   end
@@ -81,25 +81,34 @@ def brands_report
   brands.each do |brand|
 
     # Print the name of the brand
-    $report_file.puts "Brand: \"#{brand}\""
+    $report_file.puts " Brand: \"#{brand}\""
 
     # Select items for each brand
     brand_toys = $products_hash["items"].select {|toy| toy["brand"] == brand}
 
     # Count and print the number of the brand's toys we stock
-    $report_file.puts "#{brand} inventory: #{do_total(brand_toys, "stock")}"
+    $report_file.puts " #{brand} inventory: #{do_total(brand_toys, "stock").to_i}"
 
     # Calculate and print the average price of the brand's toys
-
+    $report_file.puts " Average price for #{brand}: #{do_total(brand_toys, "full-price") / brand_toys.count }"
 
 	  # Calculate and print the total sales volume of all the brand's toys combined
+    sales_vol = 0.0
 
+    brand_toys.each do |toy|
+      sales_vol = sales_vol + do_total(toy["purchases"],"price")
+    end
 
-  $report_file.puts
+    $report_file.puts " #{brand} sales volume: #{sales_vol.round(2)}"
+
+    $report_file.puts
   end
 end
 
-# Start report execution here:
+
+#
+# *** Start report execution here: ***
+#
 
 setup_files
 
