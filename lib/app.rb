@@ -29,7 +29,7 @@ end
 # Calculate total:
 def do_total(hash, field)
   total = 0.0
-  total = hash.inject(total) {|total, element | total + element[field].to_f}
+  total = hash.reduce(total) {|total, element | total + element[field].to_f}
   return total.round(2)
 end
 
