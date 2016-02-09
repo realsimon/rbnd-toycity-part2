@@ -1,0 +1,53 @@
+commit dc2a3432c5efad05a1876b76b007e294fc120104
+Author: realsimon <realsimon@gmail.com>
+Date:   Mon Feb 8 23:44:00 2016 -0500
+
+    Replace inject with reduce
+
+commit df917be860fd923debe4b5996f96e46802400d82
+Author: realsimon <realsimon@gmail.com>
+Date:   Mon Feb 8 23:37:56 2016 -0500
+
+    adding report file
+
+commit 7b10a26f49528062a7d84fb9b806594378e50792
+Author: realsimon <realsimon@gmail.com>
+Date:   Mon Feb 8 23:36:32 2016 -0500
+
+    Completed "Brands"
+
+commit 0278bd516c943143c1d9ab9ccd1a380fc3e1202b
+Author: realsimon <realsimon@gmail.com>
+Date:   Mon Feb 8 19:06:49 2016 -0500
+
+    Some more comments and first half of brands
+
+commit 51daa2d5f3a3a3ed6241bcb44c87902e4a62d6e4
+Author: realsimon <realsimon@gmail.com>
+Date:   Mon Feb 8 18:39:22 2016 -0500
+
+    Products part of report
+
+commit eee4835e62c02b29e9d3c03e67efd2981d38bd9e
+Author: realsimon <realsimon@gmail.com>
+Date:   Fri Feb 5 01:10:41 2016 -0500
+
+    Ignore
+
+commit 36b6f7ab2a055f0b14e95c1e81af699a3d60b3ba
+Author: realsimon <realsimon@gmail.com>
+Date:   Fri Feb 5 01:09:43 2016 -0500
+
+    Print banners
+
+commit 2ff6bb237dac1b92f5ae3c8f2bc98f0c79bcdc58
+Author: realsimon <realsimon@gmail.com>
+Date:   Thu Feb 4 23:39:57 2016 -0500
+
+    setup_files method
+
+commit 990394b61191de5f5344a23769d373eb7dc1a1a3
+Author: realsimon <realsimon@gmail.com>
+Date:   Thu Feb 4 22:48:18 2016 -0500
+
+    Initial commit
