@@ -106,19 +106,23 @@ end
 # *** Start report execution here: ***
 #
 
+# Setup input/output files:
 files = setup_files
 
-# Print "Sales Report" in ascii art
+# Print "Sales Report" in ascii art:
 print_banner('Sales Report', files[1])
 
+# Print Time:
 print_time(files[1])
 
-# Print "Products" in ascii art
+# Print "Products" in ascii art:
 print_banner('Products', files[1])
 
+# Print products report:
 products_report(files)
 
-# Print "Brands" in ascii art
+# Print "Brands" in ascii art:
 print_banner('Brands', files[1])
 
+# Print brand report:
 brands_report(files)
