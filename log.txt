@@ -1,3 +1,21 @@
+commit cc892ff0d7e76ca5818a1ee30d6e09cabe545e03
+Author: realsimon <realsimon@gmail.com>
+Date:   Fri Feb 12 21:59:15 2016 -0500
+
+    Move all code except "require" into methods
+
+commit b95813bc7c6a554c03d7a38ec6ad84250da8b471
+Author: realsimon <realsimon@gmail.com>
+Date:   Tue Feb 9 18:59:40 2016 -0500
+
+    Trying ruby-beautify
+
+commit 5f71b13d4f0df021d64f938132d38972aad2e30f
+Author: realsimon <realsimon@gmail.com>
+Date:   Tue Feb 9 10:42:56 2016 -0500
+
+    Updated git.log and artii comment
+
 commit 8d491ec39544f08af3ea2adc55f6d3b08e108117
 Author: realsimon <realsimon@gmail.com>
 Date:   Tue Feb 9 10:40:13 2016 -0500
